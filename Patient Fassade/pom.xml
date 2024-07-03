@@ -44,6 +44,12 @@
             <artifactId>hapi-fhir-structures-r4</artifactId>
             <version>5.4.0</version>
         </dependency>
+        <!-- HAPI FHIR-Abhängigkeit für FHIR-Server -->
+        <dependency>
+            <groupId>ca.uhn.hapi.fhir</groupId>
+            <artifactId>hapi-fhir-server</artifactId>
+            <version>5.4.0</version>
+        </dependency>
         <!-- Spring Boot Starter-Abhängigkeit für grundlegende Spring Boot-Funktionen -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

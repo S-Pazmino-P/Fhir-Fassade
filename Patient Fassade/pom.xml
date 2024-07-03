@@ -6,17 +6,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Gruppen-ID des Projekts -->
-    <groupId>com.example</groupId>
+    <groupId>ag.develop</groupId>
     <!-- Artefakt-ID des Projekts -->
-    <artifactId>demo</artifactId>
+    <artifactId>patient-fassade</artifactId>
     <!-- Versionsnummer des Projekts -->
     <version>0.0.1-SNAPSHOT</version>
     <!-- Verpackungstyp des Projekts -->
     <packaging>jar</packaging>
     <!-- Name des Projekts -->
-    <name>demo</name>
+    <name>Patient Fassade</name>
     <!-- Beschreibung des Projekts -->
-    <description>Demo project for Spring Boot</description>
+    <description>Fassade for a PAtient Fhir Resource</description>
 
     <!-- Definition des Elternprojekts -->
     <parent>
@@ -54,6 +54,25 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope> <!-- Nur für den Testbereich -->
+        </dependency>
+        <!-- Junit-Abhängigkeit für unit tests -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Lombok-Abhängigkeit für boiler plate code -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
